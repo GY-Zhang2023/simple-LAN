@@ -1,1 +1,1 @@
-# TE_LAN
+# simple-LAN
