@@ -15,6 +15,8 @@ git clone https://github.com/YOUR_USERNAME/simple-LAN.git
 cd simple-LAN
 bash install.sh
 conda env create -f environment.yml
+bash**
+
 Activate environmentbashsource $HOME/.local/bin/../env/ribo_LAN_env.sh
 rna_LAN -h
 ribo_LAN -h
