@@ -1,5 +1,4 @@
 # simple-LAN
-# simple‑LAN
 > Automated Ribo‑seq(mainly) & Bulk RNA‑seq end‑to‑end analysis pipeline for human/mouse/CHmito.
 > Open source pipeline for ribosome profiling and polyA RNA‑seq, support TE(Translation Efficiency) calculation and differential analysis.
 
