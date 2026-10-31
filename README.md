@@ -1,46 +1,95 @@
-# simple-LAN
-> Automated Ribo‑seq(mainly) & Bulk RNA‑seq end‑to‑end analysis pipeline for human/mouse/CHmito.
-> Open source pipeline for ribosome profiling and polyA RNA‑seq, support TE(Translation Efficiency) calculation and differential analysis.
+# simple‑LAN
 
-## ⚡ Quick install (One‑click)
-```bash
-# clone repository
-git clone https://github.com/YOUR_USERNAME/simple-LAN.git
+Automated Bulk RNA‑seq & Ribo‑seq end‑to‑end analysis pipeline.
+
+Workflow
+
+- Bulk RNA‑seq: QC → adapter trimming → alignment → gene quantification → PCA / DEG / GO‑KEGG enrichment
+- Ribo‑seq: QC, adapter‑trim, rRNA‑tRNA depletion, STAR alignment, riboWaltz P‑site calibration, periodicity, codon occupancy
+- Combined mode: compute Translation Efficiency(TE) and differential TE analysis
+
+> 
+> Tested environment: Linux, conda.
+> Reference genome / index files are NOT included in this repository due to large size.
+
+## ⚡ Quick install
+
+git clone [https://github.com/YOUR_USERNAME/simple-LAN.git](https://github.com/YOUR_USERNAME/simple-LAN.git)
 cd simple-LAN
-
-# run one‑click install
 bash install.sh
-
-# create conda environment
 conda env create -f environment.yml
-```
 
 ### Activate environment
-```bash
+
 source $HOME/.local/bin/../env/ribo_LAN_env.sh
-# test commands
 rna_LAN -h
 ribo_LAN -h
-```
 
-## Workflow
-- Bulk RNA‑seq: QC → trim → HISAT2/STAR → quantification → PCA/DESeq2/edgeR → GO/KEGG
-- Ribo‑seq: Trim‑galore → bowtie2 rRNA/tRNA depletion → STAR alignment → riboWaltz P‑site calibration
-- Combined: RNA+Ribo compute TE and differential TE analysis
+### Custom resource limit (environment variable override)
 
-## Input example
-See `example/` folder for csv template.
+export N_CORES=8
+export MEMORY_LIMIT_GB=50
 
-## Reference genome preparation
-Please read `docs/reference_prepare.md`.
-> Reference fasta/gtf/index are NOT included in this repository due to large file size, user need download and build index manually.
-
-## Output structure
-See `docs/output_structure.md`
+# run pipeline commands ...
 
 ## Supported species
-- human GRCh38.p14 gencode v49
-- mouse GRCm39.p6 gencode vM35
-- CHmito Chaetomium thermophilum mitochondrial
 
-> Test environment: Linux, conda, R‑4.4
+- human (GRCh38.p14, GENCODE v49)
+- mouse (GRCm39, GENCODE vM35)
+- CHmito (Chaetomium thermophilum mitochondrial custom reference)
+
+## Reference preparation
+
+Read document: docs/reference_prepare.md
+
+> 
+> You must download genome fasta, GTF annotation and build STAR / bowtie2 index manually, fill absolute paths in pipeline script SPECIES_CONFIG dictionary.
+
+## Output directory structure
+
+Read document: docs/output_structure.md
+
+## Input template
+
+Sample csv templates are under folder example/
+
+- rna_sample.csv for bulk RNA‑seq
+- ribo_sample.csv for ribo‑seq
+- group.csv for differential analysis
+
+## Usage example
+
+Bulk RNA‑seq
+
+cd your_rna_project
+rna_LAN --step1 sample.csv
+rna_LAN --step2
+rna_LAN --step3 group.csv
+rna_LAN --step4
+rna_LAN --step5 group.csv
+
+Ribo‑seq
+
+cd your_ribo_project
+ribo_LAN --step1 ribo_sample.csv
+ribo_LAN --step2
+ribo_LAN --step3
+ribo_LAN --step4
+ribo_LAN --step5
+ribo_LAN --step6 group.csv gene_list.txt
+
+## Software version list
+
+Software        Version
+R               4.4.x
+cutadapt        >=4.0
+STAR            >=2.7.11
+HISAT2          >=2.2.1
+bowtie2         >=2.5
+samtools        >=1.18
+riboWaltz       >=1.2.0
+
+## Notes
+
+- Do NOT run analysis inside source‑code git repository folder, use independent project workspace.
+- All log / plot outputs are in project sub‑folders.
