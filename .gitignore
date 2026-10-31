@@ -1,0 +1,29 @@
+# sequencing big data
+*.fastq.gz
+*.bam
+*.bai
+*.sam
+*.fasta
+*.fa
+*.gtf
+*.bt2
+*.bt2l
+
+# pipeline runtime output
+*/tmp/*
+*/temp/*
+*.log
+*.pdf
+*.png
+*.html
+*.tsv
+*.csv
+
+# R temp
+*.RData
+*.rds
+.Rhistory
+
+# system
+.DS_Store
+__pycache__/
