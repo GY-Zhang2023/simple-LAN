@@ -1,0 +1,30 @@
+name: ribo_simple
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - r-base=4.4
+  - cutadapt>=4.0
+  - trim-galore
+  - bowtie2>=2.5
+  - star>=2.7.11
+  - hisat2>=2.2.1
+  - stringtie
+  - samtools>=1.18
+  - fastqc
+  - dos2unix
+  - r-data.table
+  - r-ggplot2
+  - r-pheatmap
+  - r-ggrepel
+  - r-future.apply
+  - bioconductor-deseq2
+  - bioconductor-clusterprofiler
+  - bioconductor-ribowaltz
+  - bioconductor-txdbmaker
+  - bioconductor-genomicalignments
+  - bioconductor-biostrings
+  - bioconductor-org.hs.eg.db
+  - bioconductor-org.mm.eg.db
