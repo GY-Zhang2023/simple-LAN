@@ -2,8 +2,11 @@
 This document describes how to download genome sequences, annotations and build indexes required by simple‑LAN.
 
 > Reference files are NOT distributed in this repository due to large file size.
+> 
 > **Pre-built reference bundles (canonical genome, pc GTF, pc transcript FASTA, bowtie2 rRNA-tRNA index) can be directly downloaded from our Zenodo repository: https://zenodo.org/records/XXXXXX**
+> 
 > Users need to prepare them manually and fill absolute paths in the `SPECIES_CONFIG` and `SPECIES_REF_MAP` dictionaries inside pipeline shell scripts.
+> 
 > This pipeline uses **protein-coding only GTF/transcript FASTA** and canonical genome sequence instead of the full annotation set.
 
 ## Supported species
