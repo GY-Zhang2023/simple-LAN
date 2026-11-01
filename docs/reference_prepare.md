@@ -7,8 +7,6 @@ This document describes how to download genome sequences, annotations and build 
 ## Supported species
 - human (GRCh38.p14, GENCODE v49)
 - mouse (GRCm39, GENCODE vM35)
-- CHmito (Chaetomium thermophilum mitochondrial, custom mitochondrial reference)
-
 ---
 
 ## 1. Human GRCh38.p14 | GENCODE v49
@@ -46,13 +44,7 @@ STAR index and bowtie2 rRNA‑tRNA index construction commands are identical to 
 
 ---
 
-## 3. CHmito (Chaetomium thermophilum mitochondrial)
-This is a custom mitochondrial reference.
-Prepare fasta and gtf manually, then build STAR index and bowtie2 contamination index following exactly the same workflow above.
-
----
-
-## 4. Fill paths in pipeline config block
+## 3. Fill paths in pipeline config block
 After all indexes are ready, open pipeline shell script and modify `SPECIES_CONFIG` associative array:
 
 declare -A SPECIES_CONFIG
@@ -72,5 +64,4 @@ your_reference_root/
 │   ├── gencode.v49.annotation.gtf
 │   ├── star_index_human_v49/
 │   └── bowtie2_rrna_tRNA/
-├── mouse/
-└── CHmito/
+└── mouse/
