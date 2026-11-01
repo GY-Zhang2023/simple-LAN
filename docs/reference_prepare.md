@@ -2,6 +2,7 @@
 This document describes how to download genome sequences, annotations and build indexes required by simple‑LAN.
 
 > Reference files are NOT distributed in this repository due to large file size.
+> **Pre-built reference bundles (canonical genome, pc GTF, pc transcript FASTA, bowtie2 rRNA-tRNA index) can be directly downloaded from our Zenodo repository: https://zenodo.org/records/XXXXXX**
 > Users need to prepare them manually and fill absolute paths in the `SPECIES_CONFIG` and `SPECIES_REF_MAP` dictionaries inside pipeline shell scripts.
 > This pipeline uses **protein-coding only GTF/transcript FASTA** and canonical genome sequence instead of the full annotation set.
 
@@ -17,6 +18,7 @@ wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/GRCh38.p
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.annotation.gtf.gz
 
 gunzip GRCh38.p14.genome.fa.gz
+
 gunzip gencode.v49.annotation.gtf.gz
 
 ### Filter protein-coding annotations
@@ -41,6 +43,7 @@ bowtie2-build rrna_trna.fasta human_rrna_tRNA_index
 ## 2. Mouse GRCm39 p6 | GENCODE vM35
 ### Download genome & annotation
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M35/GRCm39.genome.fa.gz
+
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M35/gencode.vM35.annotation.gtf.gz
 
 gunzip *.gz
@@ -73,7 +76,7 @@ SPECIES_CONFIG["mouse_star_index"]="$HOME/ribo_simple_LAN/TOOLS/star_mus_genome_
 
 declare -A SPECIES_REF_MAP
 SPECIES_REF_MAP["human"]="$HOME/ribo_references/rrna_trna/human_rrna_tRNA_index"
-SPECIES_REF_MAP["mouse"]="$HOME/reference/mouse_transcriptome/mouse_rrna_tRNA_index"
+SPECIES_REF_MAP["mouse"]="$HOME/ribo_references/rrna_trna/mouse_rrna_tRNA_index"
 
 > Pipeline will abort immediately with error if reference file missing.
 
