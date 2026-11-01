@@ -31,7 +31,7 @@ export MEMORY_LIMIT_GB=50
 ## Supported species
 - human (GRCh38.p14, GENCODE v49)
 - mouse (GRCm39, GENCODE vM35)
-- CHmito (Chaetomium thermophilum mitochondrial custom reference)
+- other species in future development
 
 ## Reference preparation
 Read document: [`docs/reference_prepare.md`](docs/reference_prepare.md)
