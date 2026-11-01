@@ -15,7 +15,7 @@ FILTER_MONOSOME_LENGTH=true
 
 declare -A SPECIES_REF_MAP
 SPECIES_REF_MAP["human"]="$HOME/ribo_references/rrna_trna/human_rrna_tRNA_index"
-SPECIES_REF_MAP["mouse"]="$HOME/reference/mouse_transcriptome/mouse_rrna_tRNA_index"
+SPECIES_REF_MAP["mouse"]="$HOME/ribo_references/rrna_trna/mouse_rrna_tRNA_index"
 
 if [ $# -ne 3 ]; then
     echo "Usage: $0 <CSV_ABS_PATH> <MIN_LENGTH> <MAX_LENGTH>"
