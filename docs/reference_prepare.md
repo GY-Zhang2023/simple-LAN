@@ -89,12 +89,12 @@ $HOME/
 │   └── mouse_transcriptome/
 │       ├── GRCm39.p6.canonical_genome.fa
 │       ├── gencode.vM35.pc_annotation.gtf
-│       ├── gencode.vM35.pc_transcripts.fa
-│       └── mouse_rrna_tRNA_index.*
+│       └── gencode.vM35.pc_transcripts.fa
 ├── ribo_simple_LAN/
 │   └── TOOLS/
 │       ├── star_genome_index/
 │       └── star_mus_genome_index/
 └── ribo_references/
     └── rrna_trna/
+        ├── mouse_rrna_tRNA_index.*
         └── human_rrna_tRNA_index.*
