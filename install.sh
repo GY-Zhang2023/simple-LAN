@@ -31,7 +31,7 @@ chmod +x "${TOOLS_DIR}"/*.sh "${TOOLS_DIR}"/*.R
 chmod +x "${REPO_ROOT}/env/"*.sh
 
 echo "[INFO] Create global command symlinks under ${LOCAL_BIN}"
-ln -sf "${TOOLS_DIR}/rna_LANSummary.sh" "${LOCAL_BIN}/rna_LAN"
+ln -sf "${TOOLS_DIR}/rna_LAN.sh" "${LOCAL_BIN}/rna_LAN"
 ln -sf "${TOOLS_DIR}/ribo_LAN.sh" "${LOCAL_BIN}/ribo_LAN"
 
 if ! echo "${PATH}" | grep -q "${LOCAL_BIN}"; then
