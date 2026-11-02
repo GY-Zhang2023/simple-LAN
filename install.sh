@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "=================================================="
-echo "          simple‑LAN One‑Click Installer          "
+echo "          simple‑ribo One‑Click Installer          "
 echo "     Bulk RNA‑seq & Ribo‑seq analysis pipeline    "
 echo "=================================================="
 
