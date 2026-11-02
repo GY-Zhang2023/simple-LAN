@@ -1,5 +1,5 @@
 # Output Directory Structure
-simple‑LAN separates analysis workspace from source‑code repository.
+simple‑ribo separates analysis workspace from source‑code repository.
 > ⚠️ Each analysis project should be an independent folder. DO NOT run analysis inside git source‑code repository directory.
 
 ## Bulk RNA‑seq project
