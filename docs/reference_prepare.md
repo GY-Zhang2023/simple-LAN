@@ -3,7 +3,7 @@ This document describes how to download genome sequences, annotations and build 
 
 > Reference files are NOT distributed in this repository due to large file size.
 > 
-> **Pre-built reference bundles (canonical genome, pc GTF, pc transcript FASTA, bowtie2 rRNA-tRNA index) can be directly downloaded from our Zenodo repository: https://zenodo.org/records/XXXXXX**
+> **Pre-built reference bundles (canonical genome, pc GTF, pc transcript FASTA, bowtie2 rRNA-tRNA index) can be directly downloaded from our Zenodo repository: 10.5281/zenodo.23873959
 > 
 > Users need to prepare them manually and fill absolute paths in the `SPECIES_CONFIG` and `SPECIES_REF_MAP` dictionaries inside pipeline shell scripts.
 > 
