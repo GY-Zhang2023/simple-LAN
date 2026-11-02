@@ -1,4 +1,4 @@
-# simple‑LAN
+# simple‑ribo
 Automated Bulk RNA‑seq & Ribo‑seq end‑to‑end analysis pipeline.
 
 Workflow
@@ -11,8 +11,8 @@ Workflow
 
 ## ⚡ Quick install
 ```bash
-git clone https://github.com/YOUR_USERNAME/simple-LAN.git
-cd simple-LAN
+git clone https://github.com/YOUR_USERNAME/simple-ribo.git
+cd simple-ribo
 bash install.sh
 conda env create -f environment.yml
 ```
