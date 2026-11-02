@@ -1,5 +1,5 @@
 # Reference Genome & Index Preparation
-This document describes how to download genome sequences, annotations and build indexes required by simple‑LAN.
+This document describes how to download genome sequences, annotations and build indexes required by simple‑ribo.
 
 > Reference files are NOT distributed in this repository due to large file size.
 > 
