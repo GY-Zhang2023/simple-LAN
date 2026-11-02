@@ -43,19 +43,10 @@ Read document: [`docs/reference_prepare.md`](docs/reference_prepare.md)
 Read document: docs/output_structure.md
 ## Input template
 Sample csv templates are under folder `example/`
-
-- `rna_sample.csv` for bulk RNA‑seq
 - `ribo_sample.csv` for ribo‑seq
+- `rna_sample.csv` for bulk RNA‑seq
 - `group.csv` for differential analysis
-## Usage exampleBulk RNA‑seq
-```bash
-cd your_rna_project
-rna_LAN --step1 sample.csv
-rna_LAN --step2
-rna_LAN --step3 group.csv
-rna_LAN --step4
-rna_LAN --step5 group.csv
-```
+## Usage example
 Ribo‑seq
 ```bash
 cd your_ribo_project
@@ -65,6 +56,15 @@ ribo_LAN --step3
 ribo_LAN --step4
 ribo_LAN --step5
 ribo_LAN --step6 group.csv gene_list.txt
+```
+Bulk RNA‑seq
+```bash
+cd your_rna_project
+rna_LAN --step1 sample.csv
+rna_LAN --step2
+rna_LAN --step3 group.csv
+rna_LAN --step4
+rna_LAN --step5 group.csv
 ```
 ## Software version list
 | Software  | Version   |
