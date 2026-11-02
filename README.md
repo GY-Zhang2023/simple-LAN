@@ -1,9 +1,9 @@
 # simple‑ribo
-Automated Bulk RNA‑seq & Ribo‑seq end‑to‑end analysis pipeline.
+Automated Ribo‑seq & Bulk RNA‑seq end‑to‑end analysis pipeline.
 
 Workflow
-- Bulk RNA‑seq: QC → adapter trimming → alignment → gene quantification → PCA / DEG / GO‑KEGG enrichment
 - Ribo‑seq: QC, adapter‑trim, rRNA‑tRNA depletion, STAR alignment, riboWaltz P‑site calibration, periodicity, codon occupancy
+- Bulk RNA‑seq: QC → adapter trimming → alignment → gene quantification → PCA / DEG / GO‑KEGG enrichment
 - Combined mode: compute Translation Efficiency(TE) and differential TE analysis
 
 > Tested environment: Linux, conda.
@@ -19,8 +19,8 @@ conda env create -f environment.yml
 ## Activate environmentbash
 ```bash
 source $HOME/.local/bin/../env/ribo_LAN_env.sh
-rna_LAN -h
 ribo_LAN -h
+rna_LAN -h
 ```
 ## Custom resource limit (environment variable override)
 ```bash
